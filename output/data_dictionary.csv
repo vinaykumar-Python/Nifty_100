@@ -1,0 +1,106 @@
+cid,name,type,notnull,dflt_value,pk,table_name
+0,Mkt Fintech — Nifty 100  |  Companies  |  92 records,TEXT,0,,0,companies
+1,Unnamed: 1,TEXT,0,,0,companies
+2,Unnamed: 2,TEXT,0,,0,companies
+3,Unnamed: 3,TEXT,0,,0,companies
+4,Unnamed: 4,TEXT,0,,0,companies
+5,Unnamed: 5,TEXT,0,,0,companies
+6,Unnamed: 6,TEXT,0,,0,companies
+7,Unnamed: 7,TEXT,0,,0,companies
+8,Unnamed: 8,TEXT,0,,0,companies
+9,Unnamed: 9,TEXT,0,,0,companies
+10,Unnamed: 10,TEXT,0,,0,companies
+11,Unnamed: 11,TEXT,0,,0,companies
+0,"Bluestock Fintech — Nifty 100  |  Profit & Loss  |  1,276 records",TEXT,0,,0,profit_loss
+1,Unnamed: 1,TEXT,0,,0,profit_loss
+2,Unnamed: 2,TEXT,0,,0,profit_loss
+3,Unnamed: 3,TEXT,0,,0,profit_loss
+4,Unnamed: 4,TEXT,0,,0,profit_loss
+5,Unnamed: 5,TEXT,0,,0,profit_loss
+6,Unnamed: 6,TEXT,0,,0,profit_loss
+7,Unnamed: 7,TEXT,0,,0,profit_loss
+8,Unnamed: 8,TEXT,0,,0,profit_loss
+9,Unnamed: 9,TEXT,0,,0,profit_loss
+10,Unnamed: 10,TEXT,0,,0,profit_loss
+11,Unnamed: 11,TEXT,0,,0,profit_loss
+12,Unnamed: 12,TEXT,0,,0,profit_loss
+13,Unnamed: 13,TEXT,0,,0,profit_loss
+14,Unnamed: 14,TEXT,0,,0,profit_loss
+0,"Bluestock Fintech — Nifty 100  |  Balance Sheet  |  1,312 records",TEXT,0,,0,balance_sheet
+1,Unnamed: 1,TEXT,0,,0,balance_sheet
+2,Unnamed: 2,TEXT,0,,0,balance_sheet
+3,Unnamed: 3,TEXT,0,,0,balance_sheet
+4,Unnamed: 4,TEXT,0,,0,balance_sheet
+5,Unnamed: 5,TEXT,0,,0,balance_sheet
+6,Unnamed: 6,TEXT,0,,0,balance_sheet
+7,Unnamed: 7,TEXT,0,,0,balance_sheet
+8,Unnamed: 8,TEXT,0,,0,balance_sheet
+9,Unnamed: 9,TEXT,0,,0,balance_sheet
+10,Unnamed: 10,TEXT,0,,0,balance_sheet
+11,Unnamed: 11,TEXT,0,,0,balance_sheet
+12,Unnamed: 12,TEXT,0,,0,balance_sheet
+0,"Bluestock Fintech — Nifty 100  |  Cash Flow  |  1,187 records",TEXT,0,,0,cash_flow
+1,Unnamed: 1,TEXT,0,,0,cash_flow
+2,Unnamed: 2,TEXT,0,,0,cash_flow
+3,Unnamed: 3,TEXT,0,,0,cash_flow
+4,Unnamed: 4,TEXT,0,,0,cash_flow
+5,Unnamed: 5,TEXT,0,,0,cash_flow
+6,Unnamed: 6,TEXT,0,,0,cash_flow
+0,id,INTEGER,0,,0,ratios
+1,company_id,TEXT,0,,0,ratios
+2,year,TEXT,0,,0,ratios
+3,net_profit_margin_pct,REAL,0,,0,ratios
+4,operating_profit_margin_pct,REAL,0,,0,ratios
+5,return_on_equity_pct,REAL,0,,0,ratios
+6,debt_to_equity,REAL,0,,0,ratios
+7,interest_coverage,REAL,0,,0,ratios
+8,asset_turnover,REAL,0,,0,ratios
+9,free_cash_flow_cr,REAL,0,,0,ratios
+10,capex_cr,REAL,0,,0,ratios
+11,earnings_per_share,REAL,0,,0,ratios
+12,book_value_per_share,REAL,0,,0,ratios
+13,dividend_payout_ratio_pct,REAL,0,,0,ratios
+14,total_debt_cr,INTEGER,0,,0,ratios
+15,cash_from_operations_cr,REAL,0,,0,ratios
+0,id,INTEGER,0,,0,stock_prices
+1,company_id,TEXT,0,,0,stock_prices
+2,date,TEXT,0,,0,stock_prices
+3,open_price,REAL,0,,0,stock_prices
+4,high_price,REAL,0,,0,stock_prices
+5,low_price,REAL,0,,0,stock_prices
+6,close_price,REAL,0,,0,stock_prices
+7,volume,INTEGER,0,,0,stock_prices
+8,adjusted_close,REAL,0,,0,stock_prices
+0,id,INTEGER,0,,0,peer_comparison
+1,peer_group_name,TEXT,0,,0,peer_comparison
+2,company_id,TEXT,0,,0,peer_comparison
+3,is_benchmark,INTEGER,0,,0,peer_comparison
+0,Bluestock Fintech — Nifty 100  |  Analysis  |  20 records,TEXT,0,,0,analysis
+1,Unnamed: 1,TEXT,0,,0,analysis
+2,Unnamed: 2,TEXT,0,,0,analysis
+3,Unnamed: 3,TEXT,0,,0,analysis
+4,Unnamed: 4,TEXT,0,,0,analysis
+5,Unnamed: 5,TEXT,0,,0,analysis
+0,"Bluestock Fintech — Nifty 100  |  Documents  |  1,585 records",TEXT,0,,0,documents
+1,Unnamed: 1,TEXT,0,,0,documents
+2,Unnamed: 2,TEXT,0,,0,documents
+3,Unnamed: 3,TEXT,0,,0,documents
+0,id,INTEGER,0,,0,market_cap
+1,company_id,TEXT,0,,0,market_cap
+2,year,INTEGER,0,,0,market_cap
+3,market_cap_crore,REAL,0,,0,market_cap
+4,enterprise_value_crore,REAL,0,,0,market_cap
+5,pe_ratio,REAL,0,,0,market_cap
+6,pb_ratio,REAL,0,,0,market_cap
+7,ev_ebitda,REAL,0,,0,market_cap
+8,dividend_yield_pct,REAL,0,,0,market_cap
+0,Bluestock Fintech — Nifty 100  |  Pros & Cons  |  16 records,TEXT,0,,0,pros_cons
+1,Unnamed: 1,TEXT,0,,0,pros_cons
+2,Unnamed: 2,TEXT,0,,0,pros_cons
+3,Unnamed: 3,TEXT,0,,0,pros_cons
+0,id,INTEGER,0,,0,sectors
+1,company_id,TEXT,0,,0,sectors
+2,broad_sector,TEXT,0,,0,sectors
+3,sub_sector,TEXT,0,,0,sectors
+4,index_weight_pct,REAL,0,,0,sectors
+5,market_cap_category,TEXT,0,,0,sectors
