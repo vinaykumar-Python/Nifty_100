@@ -1,33 +1,56 @@
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 
-def forecast_next_3_years(df, value_column):
+import pandas as pd
 
-    data = df[["year", value_column]].dropna().copy()
+def forecast_next_3_years(df, metric):
 
-    if len(data) < 5:
-        return None
+    print(df[["year", metric]].head(20))
+    print(df["year"].unique())
 
-    data["year"] = (
-        data["year"]
-        .str.extract(r'(\d{4})')
-        .astype(int)
+    return None
+    # Convert safely
+    df["year"] = pd.to_numeric(
+        df["year"],
+        errors="coerce"
     )
 
-    X = data[["year"]]
-    y = data[value_column]
+    # Remove invalid years
+    df = df.dropna(subset=["year"])
+
+    if len(df) < 3:
+        return None
+
+    # Convert after removing NaNs
+    df["year"] = df["year"].astype("int64")
+
+    df = df.sort_values("year")
+
+    X = df[["year"]]
+
+    y = df[metric]
 
     model = LinearRegression()
+
     model.fit(X, y)
+
+    last_year = int(df["year"].max())
 
     future = pd.DataFrame({
         "year": [
-            data["year"].max() + 1,
-            data["year"].max() + 2,
-            data["year"].max() + 3,
+            last_year + 1,
+            last_year + 2,
+            last_year + 3
         ]
     })
 
-    future[value_column] = model.predict(future)
+    future[metric] = model.predict(future)
 
-    return pd.concat([data, future], ignore_index=True)
+    history = df[["year", metric]]
+
+    result = pd.concat(
+        [history, future],
+        ignore_index=True
+    )
+
+    return result
